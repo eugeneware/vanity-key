@@ -2,8 +2,6 @@
 
 Generate vanity prefixes for Bitcoin public key addresses
 
-[![build status](https://secure.travis-ci.org/eugeneware/vanity-key.png)](http://travis-ci.org/eugeneware/vanity-key)
-
 ## Installation
 
 This module is installed via npm:

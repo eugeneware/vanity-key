@@ -7,6 +7,11 @@ var alphabet = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 var prefix = process.argv[2] || '';
 var error;
 
+if (prefix === '-h' || prefix === '--help') {
+  console.error('Usage: vanity-key [prefix]');
+  process.exit();
+}
+
 if (prefix && prefix.length) {
   if (prefix[0] !== '1') {
     error = 'Prefix must start with a 1';
@@ -28,5 +33,5 @@ if (prefix && prefix.length) {
   }
 }
 var key = vanityKey(prefix);
-console.log('Public Key:  ' + (new Address(key.getPubKeyHash()).toString()));
+console.log(' Public Key: ' + (new Address(key.getPubKeyHash()).toString()));
 console.log('Private Key: ' + key.getExportedPrivateKey());
