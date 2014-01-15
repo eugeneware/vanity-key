@@ -1,6 +1,6 @@
 {
   "name": "vanity-key",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generate vanity prefixes for Bitcoin public key addresses",
   "main": "index.js",
   "bin": {
