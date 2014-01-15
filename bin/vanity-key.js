@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var Address = require('bitcoinjs-lib/src/address'),
     ECKey = require('bitcoinjs-lib/src/eckey');
 var vanityKey = require('..');
