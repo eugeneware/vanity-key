@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-var Address = require('bitcoinjs-lib/src/address'),
-    ECKey = require('bitcoinjs-lib/src/eckey');
 var vanityKey = require('..');
 var alphabet = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 
@@ -33,5 +31,5 @@ if (prefix && prefix.length) {
   }
 }
 var key = vanityKey(prefix);
-console.log(' Public Key: ' + (new Address(key.getPubKeyHash()).toString()));
+console.log(' Public Key: ' + key.getBitcoinAddress().toString());
 console.log('Private Key: ' + key.getExportedPrivateKey());
